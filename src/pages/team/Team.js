@@ -5,7 +5,7 @@ export default class Team extends Component {
         return (
                     <>
        
-        <div class="title">Team</div>
+        <div class="title">TEAM</div>
         <div class="teamMembers">
             <div class="member">
                 <div class="member-prezentation">
