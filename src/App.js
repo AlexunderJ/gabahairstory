@@ -1,18 +1,25 @@
+import React, { Component } from 'react';
 
-import Layout from './pages/Layout'
+import {Route, Switch} from 'react-router-dom';
+import Layout from './pages/Layout';
 import './App.sass';
-import Logo from './components/Logo/Logo'
-import Button from './components/UI/Button/Button'
+import Home from './pages/home/Home';
+import Kontakt from './pages/kontakt/Kontakt';
+import Team from './pages/team/Team';
+import Cennik from './pages/cennik/Cennik';
 
 function App() {
   return (
     <div className="App">
       
        <Layout>
-         <Logo/>
-         <Button btnType='' disabled={false}>Cennik</Button>
-         <Button btnType='opposit' disabled={false}>Sklep</Button>
-         <Button btnType='' disabled={false}>Wizyta</Button>
+       <Switch>
+         <Route path='/team' component={Team} />
+         <Route path='/kontakt' component={Kontakt} />
+         <Route path='/cennin' component={Cennik} />
+         <Route path='/' exact component={Home} />
+         </Switch>
+        
         
        </Layout>
         

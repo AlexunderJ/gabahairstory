@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
+import NavigationItem from '../NavigationItem/NavigationItem'
+import '../NavigationItems.sass'
 
 export default class Sidebar extends Component {
     render() {
         return (
-            <div>
-                <a href='#'> Sklep </a>
-                <a href='#'> Wizyta</a>
-                <a href='#'> Team </a>
-                <a href='#'> Cennik </a>
-                <a href='#'> Kontakt </a>
-            </div>
+<ul className={'NavigationItem'}>
+    <NavigationItem link='/' exact >Home</NavigationItem>
+    <NavigationItem link='/team'>Team</NavigationItem>
+    <NavigationItem link='/cennik'>Cennik</NavigationItem>
+    <NavigationItem link='/kontakt'>Kontakt</NavigationItem>
+</ul>
         )
     }
 }
