@@ -1,0 +1,12 @@
+import React, { Component } from 'react'
+
+export default class Toolbar extends Component {
+    render() {
+        return (
+            <div>
+                <div>FB</div>
+                <div>Instas</div>
+            </div>
+        )
+    }
+}

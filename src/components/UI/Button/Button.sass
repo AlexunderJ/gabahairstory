@@ -1,0 +1,21 @@
+@import '../../shered/variables'
+
+.btn
+    display: block
+    width: 120px
+    height: 36px
+    background-color: $bacground-color
+    color: $base-color
+    font-size: 20px
+    font-weight: 300
+    text-align: center
+    line-height: 36px
+    @include border
+
+    &:hover
+        cursor: pointer
+
+    &.opposit
+        background-color: $base-color
+        color: white
+        @include border
