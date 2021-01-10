@@ -1,7 +1,7 @@
 @import '../../shered/variables'
 
 .btn
-    display: block
+    display: inline-block
     width: 120px
     height: 36px
     background-color: $bacground-color
@@ -10,12 +10,17 @@
     font-weight: 300
     text-align: center
     line-height: 36px
+    font-family: $base-font
+    font-weight: $font-weight-base
     @include border
 
     &:hover
         cursor: pointer
+        background-color: darken($bacground-color, 10%)
 
     &.opposit
         background-color: $base-color
         color: white
         @include border
+        &:hover
+            background-color: lighten($base-color, 10%)

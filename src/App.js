@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import {Route, Switch} from 'react-router-dom';
 import Layout from './pages/Layout';
@@ -16,7 +16,7 @@ function App() {
        <Switch>
          <Route path='/team' component={Team} />
          <Route path='/kontakt' component={Kontakt} />
-         <Route path='/cennin' component={Cennik} />
+         <Route path='/cennik' component={Cennik} />
          <Route path='/' exact component={Home} />
          </Switch>
         

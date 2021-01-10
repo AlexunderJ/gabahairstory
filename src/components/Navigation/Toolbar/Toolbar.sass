@@ -1,0 +1,27 @@
+@import '../../components/shered/_variables'
+
+.social
+    position: relative
+    width: 35px
+    height: 35px
+    background-color: black
+    border-radius: 50%
+
+    & img
+        display: block
+        width: 25px
+        margin: 0
+        position: absolute
+        top: 50%
+        transform: translate(20%, -50%)
+
+    &:hover img
+        filter: invert(1)
+
+    &:hover
+        background-color: gray
+        cursor: pointer
+
+    &:active
+        background-color: rgb(255, 255, 255)
+        filter: none

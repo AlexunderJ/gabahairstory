@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-
+import './Cennik.sass'
 export default class Cennik extends Component {
     render() {
         return (
             <div>
             
-        <div class="title">Cennik</div>
-        <div class="cennik">
+        <div className="title">Cennik</div>
+        <div className="cennik">
             <table id="ceny">
                 <tr>
                     <th></th>
@@ -37,9 +37,9 @@ export default class Cennik extends Component {
                     
                 </tr>
                 <tr>
-                    <td class="noBorder">Farbowanie jednolite z cięciem<span>(2h)</span></td>
-                    <td class="noBorder">450 - 600</td>
-                    <td class="noBorder">350 - 450</td>
+                    <td className="noBorder">Farbowanie jednolite z cięciem<span>(2h)</span></td>
+                    <td className="noBorder">450 - 600</td>
+                    <td className="noBorder">350 - 450</td>
                    
                 </tr>
                 <tr>
@@ -48,9 +48,9 @@ export default class Cennik extends Component {
                     <td>300 - 400</td>                   
                 </tr>
                 <tr>
-                    <td class="noBorder">Farbowanie Refleks z cięciem<span>(3h)</span></td>
-                    <td class="noBorder">730 - 830</td>
-                    <td class="noBorder">450 - 600</td>                
+                    <td className="noBorder">Farbowanie Refleks z cięciem<span>(3h)</span></td>
+                    <td className="noBorder">730 - 830</td>
+                    <td className="noBorder">450 - 600</td>                
 
                 </tr>
                 <tr>
@@ -60,10 +60,10 @@ export default class Cennik extends Component {
 
                 </tr>
                 <tr>
-                    <td class="noBorder">Refleks g. / baleyage/airtouch z cięciem
+                    <td className="noBorder">Refleks g. / baleyage/airtouch z cięciem
                         <span>(3h)</span></td>
-                    <td class="noBorder">830 - 930</td>
-                    <td class="noBorder">630 - 730</td>                
+                    <td className="noBorder">830 - 930</td>
+                    <td className="noBorder">630 - 730</td>                
                 </tr>
                 <tr>
                     <td>bez cięcia

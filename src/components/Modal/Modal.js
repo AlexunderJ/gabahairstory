@@ -1,4 +1,5 @@
 import React from 'react'
+import './Modal.sass'
 
 export default function Modal() {
     return (
@@ -6,7 +7,7 @@ export default function Modal() {
         <div>
              <div id="backdrop">
     </div>
-    <div class="modal" id="covid-modal">
+    <div className="modal" id="covid-modal">
         <img id="logo_covid" src="./img/logo_covid.png" alt="logo" />
         <strong>#Bądźmyrazembezpieczni</strong>
 
@@ -43,11 +44,11 @@ export default function Modal() {
     </strong>
         
         
-    <p class="przypis">Wytyczne dla funkcjonowania salonów fryzjerskich w trakcie pandemii SARS-CoV-2 
+    <p className="przypis">Wytyczne dla funkcjonowania salonów fryzjerskich w trakcie pandemii SARS-CoV-2 
     Ministerstwa Rozwoju w konsultacji z GIS, 13.05.2020 r.
     </p>
 
-<div id="close_covid" class="button">OK</div>
+<div id="close_covid" className="button">OK</div>
         </div>
         </div>
         </div>
