@@ -8,12 +8,12 @@ export default class Home extends Component {
     render() {
         return (
             <>
-                 <Logo className='big-logo'/>
+                <Logo/>
                  <div className='footer-home'>
-         <Button btnType='' disabled={false}>Cennik</Button>
-         <Button btnType='opposit' disabled={false}>Sklep</Button>
-         <Button btnType='' disabled={false}>Wizyta</Button>
-         </div>
+                    <Button btnType='' disabled={false}>Cennik</Button>
+                    <Button btnType='opposit' disabled={false}>Sklep</Button>
+                    <Button btnType='' disabled={false}>Wizyta</Button>
+                </div>
             </>
         )
     }

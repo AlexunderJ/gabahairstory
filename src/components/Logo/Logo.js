@@ -4,8 +4,8 @@ import './Logo.sass';
 
 export default function Logo() {
     return (
-        <div>
-             <img src={logo} className="App-logo" alt="logo" />
+        <div className="App-logo">
+             <img src={logo}  alt="logo" />
         </div>
     )
 }

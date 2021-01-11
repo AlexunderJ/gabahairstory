@@ -15,7 +15,7 @@ export default class Layout extends Component {
         this.setState({showSideBar: false});
     }
     
-      sideSideDrawerToggleHandler = (props)=>{        
+      sideSideDrawerToggleHandler = ()=>{        
         this.setState((prevState)=>{
           return {showSideBar: !prevState.showSideBar}
           
@@ -25,28 +25,32 @@ export default class Layout extends Component {
     render() {
         let openSideBar;
         openSideBar = (this.state.showSideBar ? 'Open': 'Close');
-        console.log(this.state.showSideBar);
         let sidebar = (
             
             <div className={['SideBar', `${openSideBar}`].join(' ')}>
-            <Sidebar/>
+            <Sidebar clicked={this.sideSideDrawerToggleHandler}/>
             
             </div>
         )
         
             
            return (
-            <>
-            <Backdrop show={this.state.showSideBar} clicked={this.sideSideDrawerToggleHandler} />
-            <Toolbar />
-            <DrawToggle 
-            clicked={this.sideSideDrawerToggleHandler}
-            />
-            {sidebar}
-            <main>
-                {this.props.children}
-            </main>
-            </>
+            <div className='Layout'>
+                <Backdrop show={this.state.showSideBar} clicked={this.sideSideDrawerToggleHandler} />
+                    <div className='Header'>
+                        <Toolbar />
+                        <DrawToggle 
+                        clicked={this.sideSideDrawerToggleHandler}
+                        />
+                    </div>
+                    <div className='Main'>
+
+                {sidebar}
+                <main>
+                    {this.props.children}
+                </main>
+                    </div>
+            </div>
         )
     }
 }

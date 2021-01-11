@@ -8,12 +8,12 @@ export default function Toolbar(props) {
     
         return (
             <>
-               <a href="https://www.facebook.com/zalewskagabriela/">
+               <a className='fb' href="https://www.facebook.com/zalewskagabriela/">
                     <div className="social fb">
                         <img src={fb} alt='facebook'/>
                     </div>
                 </a>
-                <a href="https://www.instagram.com/gaba_hair_story/">
+                <a className='insta' href="https://www.instagram.com/gaba_hair_story/">
                     <div className="social insta">
                         <img src={inst} alt='instagram'/>
                     </div>

@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import NavigationItem from '../NavigationItem/NavigationItem'
 import '../NavigationItems.sass'
 import './Sidebar.sass'
 
-export default class Sidebar extends Component {
-    render() {
+export default function Sidebar(props) {
+    
      return(
-<ul className={'NavigationItem'}>
+<ul onClick={props.clicked} className={'NavigationItem'}>
     <NavigationItem link='/' exact >Home</NavigationItem>
     <NavigationItem link='/team'>Team</NavigationItem>
     <NavigationItem link='/cennik'>Cennik</NavigationItem>
@@ -14,4 +14,4 @@ export default class Sidebar extends Component {
 </ul>
      )
     }
-}
+
