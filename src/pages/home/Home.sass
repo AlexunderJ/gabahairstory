@@ -1,10 +1,18 @@
+@import '../../components/shered/_variables'
+main
+    display: grid
+    height: 100%
+
 .footer-home
 
+    align-self: end
     height: 15vh
     width: 100%
-    display: flex
-    flex-direction: row
-    justify-content: space-around
+    padding: $font-size-base
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    column-gap: $font-size-base
+    justify-items: stretch
     align-items: center
 .big-logo
     border: 1px solid black
