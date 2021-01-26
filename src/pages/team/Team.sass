@@ -1,85 +1,21 @@
 @import '../../components/shered/_variables'
 
 .teamMembers
-    width: 100%
-
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
-    justify-content: space-around
+    width: 100vw
+    display: grid
+    justify-items: center
 
 .member
-    flex-basis: 45%
-    display: flex
-    flex-direction: column
-    margin-top: 3vh
-    margin-bottom: 10vh
-    margin: 3vh 3vh 10vh
+    width: 95vw
+    height: 95vw
+    border-radius: 100%
+    overflow: hidden
 
-    &-prezentation
-        display: flex
-        flex-direction: column
-        margin-bottom: 4vh
-        align-items: center
-
-    & .member-prezentation .foto-face
-        width: 45vh
-        height: 45vh
-        overflow: hidden
-        border-radius: 50%
-
-    & .member-prezentation .foto-face img#gaba
-
-        position: relative
-        height: 100vh
-        left: -45%
-        top: -35%
-
-    & .member-prezentation .foto-face img#angela
-        position: relative
-        height: 100vh
-        left: -28%
-        top: -10%
-
-    & .member-prezentation .foto-face img#natalia
-        position: relative
-        height: 100vh
-        left: -50%
-        top: -25%
-
-    & .member-prezentation .foto-face img#karolina
-        position: relative
-        height: 100vh
-        left: -50%
-        top: -25%
-
-    & .member-prezentation .member-name h2
-        font-family: "Shadows Into Light Two", cursive
-        font-size: 36px
+    & img
+        width: 100%
+.member-name
+    h2
+        font-family: $secondary-font
+        font-size: $header-size
         font-weight: 100
         letter-spacing: 3pt
-        padding: 2vh
-        padding-left: 3vh
-        text-align: center
-
-    & .member-description p
-        text-indent: 50px
-        position: relative
-
-    & .member-description p::before
-        position: absolute
-        content: ' " ';
-        font-size: 200px
-        font-family: "Shadows Into Light Two", cursive
-        top: -90px
-        left: -55px
-        z-index: -1
-
-    & .member-description p::after
-        position: absolute
-        content: ' " ';
-        font-size: 200px
-        font-family: "Shadows Into Light Two", cursive
-        bottom: -220px
-        right: 0
-        z-index: -1

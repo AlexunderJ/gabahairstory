@@ -2,6 +2,7 @@
 main
     display: grid
     height: 100%
+    width: 100%
 
 .footer-home
 
@@ -14,15 +15,22 @@ main
     column-gap: $font-size-base
     justify-items: stretch
     align-items: center
-.big-logo
-    border: 1px solid black
+.App-logo
+    align-self: center
+    justify-self: center
     border-radius: 50%
     width: 85vw
     height: 85vw
     max-width: 500px
     max-height: 500px
+    border: 2px solid black
+    overflow: hidden
 
     & img
         width: 100%
         max-width: 500px
         max-height: 500px
+.title
+    font-family: $base-font
+    font-weight: 100
+    font-size: $header-size

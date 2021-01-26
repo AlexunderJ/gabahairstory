@@ -9,7 +9,12 @@
     text-align: center
     font-family: $base-font
     font-weight: $font-weight-base
+    text-decoration: none
     @include border
+    &
+        a
+            text-decoration: none
+            color: $base-color
 
     &:hover
         cursor: pointer
@@ -19,5 +24,8 @@
         background-color: $base-color
         color: white
         @include border
-        &:hover
-            background-color: lighten($base-color, 25% )
+        a
+            color: $bacground-color
+            text-decoration: none
+            &:hover
+                background-color: lighten($base-color, 25% )

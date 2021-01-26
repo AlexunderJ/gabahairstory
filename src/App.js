@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, withRouter} from 'react-router-dom';
 import Layout from './pages/Layout';
 import './App.sass';
 import Home from './pages/home/Home';
@@ -29,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);

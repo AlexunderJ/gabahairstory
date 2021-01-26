@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom';
 import Sidebar from '../components/Navigation/Sidebar/Sidebar';
 import DrawToggle from '../components/Navigation/Sidebar/DrawerToggle/DrawToggle'
 import Toolbar from '../components/Navigation/Toolbar/Toolbar';
 import Backdrop from '../components/UI/Backdrop/Backdrop'
+import logoSm from '../assets/ico/GabaHairStoryLogo.svg';
 import './Layout.sass'
 
 
-export default class Layout extends Component {
+class Layout extends Component {
     state= {
         showSideBar: false
     }
+    
     SideDrawerClosedHandler =() =>{
         
         this.setState({showSideBar: false});
@@ -21,8 +24,14 @@ export default class Layout extends Component {
           
       });
     }
+    goHome =()=>{
+        
+        this.props.history.push('/');
+        console.log(this.props.location.pathname);
+    }
     
     render() {
+        
         let openSideBar;
         openSideBar = (this.state.showSideBar ? 'Open': 'Close');
         let sidebar = (
@@ -32,12 +41,14 @@ export default class Layout extends Component {
             
             </div>
         )
-        
+        const logosSm = (this.props.location.pathname !== '/'?<img onClick={this.goHome} className='LogoSm' src={logoSm} 
+        alt='logoSm'/> : null)
             
            return (
             <div className='Layout'>
                 <Backdrop show={this.state.showSideBar} clicked={this.sideSideDrawerToggleHandler} />
                     <div className='Header'>
+                        {logosSm}
                         <Toolbar />
                         <DrawToggle 
                         clicked={this.sideSideDrawerToggleHandler}
@@ -54,3 +65,4 @@ export default class Layout extends Component {
         )
     }
 }
+export default withRouter(Layout)
