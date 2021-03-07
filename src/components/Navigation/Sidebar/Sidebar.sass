@@ -17,3 +17,17 @@
 
 .Close
     transform: translateX(110%)
+
+@media (min-width: 900px)
+    .SideBar
+        position: static
+        background: red
+        grid-area: sidebar
+        width: auto
+        max-width: none
+        height: $header-size
+        z-index: 200
+        background-color: $bacground-color
+        padding: 6px
+    .Close
+        transform: translateX(0%)

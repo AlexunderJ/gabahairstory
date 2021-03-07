@@ -18,11 +18,13 @@ class Layout extends Component {
         this.setState({showSideBar: false});
     }
     
-      sideSideDrawerToggleHandler = ()=>{        
-        this.setState((prevState)=>{
-          return {showSideBar: !prevState.showSideBar}
-          
-      });
+      sideSideDrawerToggleHandler = ()=>{  
+        let mediaWide = window.matchMedia("(min-width: 900px)")  
+        
+       if(mediaWide.matches) {return this.state.showSideBar} 
+       else{( this.setState((prevState)=>{
+            return {showSideBar: !prevState.showSideBar}          
+      }))};
     }
     goHome =()=>{
         
@@ -33,7 +35,10 @@ class Layout extends Component {
     render() {
         
         let openSideBar;
-        openSideBar = (this.state.showSideBar ? 'Open': 'Close');
+                       
+
+
+        openSideBar =  (this.state.showSideBar ? 'Open': 'Close');
         let sidebar = (
             
             <div className={['SideBar', `${openSideBar}`].join(' ')}>
@@ -54,9 +59,9 @@ class Layout extends Component {
                         clicked={this.sideSideDrawerToggleHandler}
                         />
                     </div>
+                {sidebar}
                     <div className='Main'>
 
-                {sidebar}
                 <main>
                     {this.props.children}
                 </main>

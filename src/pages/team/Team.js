@@ -8,7 +8,7 @@ export default class Team extends Component {
         return (
                     <>
        
-        <div className="title">TEAM</div>
+        <div className="title">Team</div>
         <div className="teamMembers">
             <div className="member">                    
                         <img id="gaba" src={Gabrysia} alt="wizerunek GabaHair"/>

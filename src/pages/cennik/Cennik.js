@@ -8,16 +8,19 @@ export default class Cennik extends Component {
         <div className="title">Cennik</div>
         <div className="cennik">
             <table id="ceny">
+            <thead>
                 <tr>
                     <th></th>
                     <th>
                         <div>Gaba</div>
                         <div>Natalia</div>
-                        <div>Sandra</div>
+                        
                     </th>
                     <th>Angela</th>
                   
                 </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td>Strzyżenie damskie<span>(1h)</span></td>
                     <td>300</td>
@@ -81,8 +84,10 @@ export default class Cennik extends Component {
                     <td>150 </td>
                     <td>150</td>
                 </tr>
+                </tbody>
             </table>
         </div>
+        <p className="Add-info">Usługa jest wykonywana przez pracownika Gaba Hair Story pod okiem Sandry</p>
         </div>
     
             

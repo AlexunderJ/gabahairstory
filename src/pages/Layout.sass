@@ -25,3 +25,11 @@
     top: -20px
     &:hover
         cursor: pointer
+
+@media (min-width: 900px)
+    .Layout
+        grid-template-columns: 50vw 50vw
+        grid-template-rows: $header-size auto
+        grid-template-areas: ' header sidebar' 'main main'
+    .Main
+        margin-top: $header-size
